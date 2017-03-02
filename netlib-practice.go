@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 )
 
 func main() {
@@ -21,6 +22,8 @@ type MockConn struct {
 	Inbuf  []byte
 	read   bool
 	Outbuf []byte
+	reader io.PipeReader
+	writer io.PipeWriter
 }
 
 func NewMockConn() *MockConn {
