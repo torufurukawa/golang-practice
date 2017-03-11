@@ -1,0 +1,5 @@
+#!/bin/sh
+# usage: source activate
+
+THIS_DIR=$(cd $(dirname $0); pwd)
+export GOPATH=${THIS_DIR}
